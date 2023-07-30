@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Tweet Sentiment Detector</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+</head>
+
+<body>
+  
+
+
+  <div class="mb-10" id="index-banner">
+    <div class="container">
+      <h1 align="center" style="color: lightblue; padding: 0; margin: 10px;"><b>Hate Speech Detection</b></h1>
+      <div class="row center">
+        <h5 align="center">Will your tweet be flagged?
+        <br>
+        <br>
+        </h5>
+        
+      </div>
+
+    <div class="row g-3">
+    <form action='/predict' method="POST" class="col s12" action="{{url_for('home')}}">
+      <div class="row">
+        <div class="form-group row">
+            <label for="tweet" class="col-sm-2 col-form-label "><b>Your tweet</b></label>
+            <div class="col-sm-10">
+              <input   id="tweet" name='tweet'type="text" class="form-control col-sm-6">
+            </div>
+          
+        </div>
+        
+
+        
+        
+        
+        
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn btn-info mb-2 center">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+      
+      <h3 class="alert-heading" align="center">{{pred}}</h3>
+      
+
+    </div>
+        <br>
+    
+
+    </div>
+    <div class="footer text-muted" style="background-color: lightblue; margin-bottom: 0; position: fixed; padding: 10px; width: 100%; bottom: 0;">
+     <h5 align="center" style="margin: 0;"> Made by <a href="https://www.linkedin.com/in/thakur-meghna/">Meghna Thakur</a> and Ritvik Gupta</h5>
+    </div>
+  </div>
+
+  
+  </body>
+</html>
